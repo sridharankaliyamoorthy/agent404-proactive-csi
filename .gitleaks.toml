@@ -1,0 +1,21 @@
+title = "agent404-proactive-csi sanitized secret scanning"
+
+[allowlist]
+description = "Allow placeholder tokens and sample non-secret strings"
+regexes = [
+  "<REDACTED_[A-Z_]+>",
+  "YOUR_[A-Z_]+_HERE",
+]
+
+[rules]
+# (Optional) can override or disable certain builtin rules later if needed
+
+[files]
+ignore = [
+  "secret_replace.txt",
+  "gitleaks-report.json"
+]
+
+[report]
+path = "gitleaks-report.json"
+format = "json"

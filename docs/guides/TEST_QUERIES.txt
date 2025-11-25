@@ -1,0 +1,67 @@
+# 🧪 ProActive CSI Agent 404 - Quick Test Queries
+
+## 🎬 For Demo: See DEMO_TEST_QUERIES.md for comprehensive demo queries showcasing all 6 IBM services
+
+---
+
+## Portfolio & Overview
+1. Show me my portfolio overview
+2. Give me an executive summary of my customer portfolio
+3. What's the overall health of my customer portfolio?
+
+## Customer Risk & Churn
+4. Who are my top 3 at-risk customers?
+5. Show me all high-risk customers
+6. Which customers are likely to churn in the next 30 days?
+7. What's the health score for Acme Corporation?
+8. Analyze churn risk for my top 10 customers
+
+## Procurement & Vendor
+9. What vendor delays are impacting customers?
+10. Show me vendor performance metrics
+11. What procurement risks do I have?
+12. Which customers are affected by vendor delays?
+
+## Revenue & Financial
+13. Calculate the financial impact of top risks
+14. What's my ARR at risk?
+15. What's the financial impact of customer churn?
+16. Generate a revenue protection strategy
+
+## Action Plans
+17. Generate an executive action plan
+18. What interventions do you recommend for at-risk customers?
+19. What are my priority actions today?
+20. Create a customer success plan for my top at-risk customer
+
+## Multi-Agent Coordination
+21. Analyze how procurement delays are affecting customer satisfaction
+22. Show me a complete risk view combining customer, procurement, and revenue risks
+23. What actions should Customer Success, Procurement, and Finance teams take?
+
+## Natural Language
+24. Good morning, what's my priority today?
+25. Tell me about Acme Corporation
+26. What should I be worried about?
+
+## Data & Analytics
+27. How many customers do I have?
+28. How many vendors are in my system?
+29. What's the total value of my portfolio?
+30. Show me the distribution of risk levels across my customers
+
+---
+
+## Quick Copy-Paste (Top 10)
+
+1. Show me my portfolio overview
+2. Who are my top 3 at-risk customers?
+3. What vendor delays are impacting customers?
+4. Calculate the financial impact of top risks
+5. Generate an executive action plan
+6. Good morning, what's my priority today?
+7. What's my ARR at risk?
+8. Which customers are likely to churn in the next 30 days?
+9. Show me vendor performance metrics
+10. What are my priority actions today?
+

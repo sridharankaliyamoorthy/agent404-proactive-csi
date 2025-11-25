@@ -1,0 +1,27 @@
+📦 DEEPNOTE UPLOAD CHECKLIST
+============================
+
+Upload these files to Deepnote:
+
+✅ REQUIRED FILES:
+  □ deepnote_app.py
+  □ requirements.txt
+  □ agents/ (entire folder)
+  □ data/ (entire folder)
+  □ workflows/ (entire folder)
+
+✅ OPTIONAL (but helpful):
+  □ Deepnote_Setup.ipynb
+  □ run_deepnote.py
+  □ DEEPNOTE_DEPLOY_NOW.md
+
+📋 QUICK COMMANDS (after upload):
+  1. pip install -r requirements.txt
+  2. streamlit run deepnote_app.py --server.port 8501 --server.address 0.0.0.0
+  3. Click the URL that appears!
+
+🎯 OR use the notebook:
+  1. Open Deepnote_Setup.ipynb
+  2. Run All cells
+  3. Click the URL!
+

@@ -1,0 +1,34 @@
+# 🎬 Quick Demo Queries - 5 Minute Demo
+
+## Top 5 Queries for Demo
+
+1. Show me my portfolio overview
+2. Who are my top 3 at-risk customers?
+3. What vendor delays are impacting customers?
+4. Calculate the financial impact of top risks
+5. Generate an executive action plan
+
+---
+
+## Voice Demo Queries (If Voice Enabled)
+
+1. Good morning, what's my priority today?
+2. Tell me about Acme Corporation
+3. Read me the executive briefing
+
+---
+
+## Service Coverage
+
+Each query demonstrates multiple IBM services:
+- watsonx.ai - AI predictions
+- watsonx Orchestrate - Multi-agent coordination
+- NLU - Sentiment analysis
+- STT - Voice input
+- TTS - Voice output
+- Cloudant - Data retrieval
+
+---
+
+For detailed demo guide, see: DEMO_TEST_QUERIES.md
+

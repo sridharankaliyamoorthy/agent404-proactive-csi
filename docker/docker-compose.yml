@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  proactive-csi-agent:
+    build:
+      context: ..  # Use the project root as context
+      dockerfile: docker/Dockerfile
+    container_name: proactive-csi-agent-404
+    ports:
+      - "8501:8501"
+    # THIS IS THE SECURE PART: Load variables from .env
+    env_file:
+      - ../.env
+    volumes:
+      # Mount code for development (optional)
+      - ../app.py:/app/app.py
+      - ../agents:/app/agents
+      - ../data:/app/data
+    restart: unless-stopped
+

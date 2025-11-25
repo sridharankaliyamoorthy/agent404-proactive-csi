@@ -1,0 +1,26 @@
+# Project Organization Summary
+
+## Root Level Files (Keep Here)
+- app.py - Main Streamlit application
+- requirements.txt - Dependencies
+- README.md - Main documentation
+- PROJECT_STRUCTURE.md - Project organization guide
+- vercel.json - Vercel deployment config
+
+## Documentation Structure
+- docs/deployment/ - Deployment guides (Deepnote, Vercel)
+- docs/setup/ - Setup guides (Local, Installation)
+- docs/ - Other project documentation
+
+## Code Structure
+- agents/ - AI agent implementations
+- workflows/ - Workflow orchestration
+- data/ - CSV data files
+- website/ - Next.js frontend
+- config/ - Configuration files
+
+## Quick Access
+- Local Run: streamlit run app.py
+- Deployment: See docs/deployment/
+- Setup: See docs/setup/
+

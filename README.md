@@ -1,17 +1,18 @@
 <!-- PROJECT TITLE -->
-  <h1 align="center">RETENX</h1>
+  <h1 align="center">RetenX - (ProActive_CSI_Agent_404)</h1>
+   <h2> AI-Powered Multi-Agent Enterprise Risk Detection & IBM Watsonx Orchestrate Integration</h2>
  <div id="header" align="center">
 </div>
 <h2 align="center">
  Description
 </h2>
 <p align="center"> <strong>Introducing RETENX:</strong>
-  An AI-powered multi-agent system that proactively detects hidden customer, procurement, and financial risks before they escalate, enabling enterprise teams to act intelligently and prevent revenue loss. With early churn prediction, risk correlation across departments, and autonomous workflow execution, RetenX transforms manual intervention into proactive action—delivering alerts, task automation, and executive briefings to protect customer relationships and business growth.  </p>
-
-  <p align="center"> <strong>Built to Win | Built for Enterprise | Built on IBM watsonx</strong></p>
+  An AI-powered multi-agent system that proactively detects hidden customer, procurement, and financial risks before they escalate, enabling enterprise teams to act intelligently and prevent revenue loss in real time.<br>
+  <strong>Built to Win | Built for Enterprise | Built on IBM watsonx</strong>
+</p>
 
 <p align="center"> 
-  
+
 [![IBM watsonx](https://img.shields.io/badge/IBM-watsonx-blue)]()
 [![Multi-Agent](https://img.shields.io/badge/Architecture-Multi--Agent-green)]()
 [![Workflows](https://img.shields.io/badge/Workflows-6-orange)]()
@@ -119,7 +120,126 @@ A **three-agent AI system** built on **IBM watsonx Orchestrate** that:
 - Models financial scenarios
 
 **Orchestration Layer:** IBM watsonx Orchestrate coordinates all 3 agents
-  
+
+---
+
+# 🟦 IBM Watsonx Orchestrate Integration (Full Documentation)
+
+---
+
+## 1. Digital Skill Manifest
+
+RETENX registers a digital skill to allow Watsonx Orchestrate to run enterprise risk assessments:
+
+```json
+{
+  "name": "retenx_risk_scan",
+  "displayName": "RETENX Enterprise Risk Scan",
+  "description": "Runs a multi-agent enterprise risk assessment across customer, procurement, and financial operations.",
+  "type": "rest",
+  "input": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "entity_id": { "type": "string" },
+        "risk_type": { "type": "string" }
+      },
+      "required": ["entity_id"]
+    }
+  },
+  "output": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "risk_score": { "type": "number" },
+        "alerts": { "type": "array" },
+        "recommendations": { "type": "array" }
+      }
+    }
+  },
+  "endpoint": {
+    "method": "POST",
+    "url": "https://<your-endpoint>/api/orchestrate/retenx/scan"
+  }
+}
+```
+
+---
+
+## 2. Orchestrate Workflow Architecture
+
+```
+┌───────────────────────────────────────────┐
+│         IBM Watsonx Orchestrate           │
+│         (Workflow & Scheduler)            │
+└──────────────────────┬────────────────────┘
+                       │ invokes
+                       │
+             ┌─────────▼─────────┐
+             │  RETENX REST API  │
+             │ /orchestrate/scan │
+             └─────────┬─────────┘
+                       │ distributes
+       ┌────────────┬───┴───────────────┬────────────┐
+       │Customer    │Procurement        │Financial   │
+       │Risk Agent  │Risk Agent         │Risk Agent  │
+       └──────┬─────┴─────────┬─────────┴───────┬────┘
+              │               │                 │
+              └─────┬─────────┴───────┬─────────┘
+                    │   Aggregation   │
+                    └────────┬────────┘
+                       ┌─────▼─────┐
+                       │ Decision  │
+                       │ Logic     │
+                       └─────┬─────┘
+       ┌──────────────────────┼────────────────────────┐
+       │                      │                        │
+Low Risk:             Medium Risk:                High Risk:
+ Auto-approve         Escalate to Manager         Notify Slack
+ Log to Cloudant      Manager Review              Create Incident
+                                                 Notify Stakeholders
+```
+
+---
+
+## 3. Example Payloads
+
+**Request:**
+```json
+{
+  "entity_id": "SUPPLIER-183",
+  "risk_type": "procurement"
+}
+```
+**Response:**
+```json
+{
+  "risk_score": 82.4,
+  "alerts": [
+    "Vendor mismatch with procurement records",
+    "Unusual transaction volume"
+  ],
+  "recommendations": [
+    "Manual review required",
+    "Temporarily suspend high-volume procurement orders"
+  ]
+}
+```
+
+---
+
+## 4. Automation Flow Summary
+
+- **Low Risk:**  
+  → Auto-approved and logged in Cloudant
+
+- **Medium Risk:**  
+  → Routed for manager approval
+
+- **High Risk:**  
+  → Slack escalation  
+  → Incident created  
+  → Notifies procurement/finance/security
 
 ---
 
@@ -134,7 +254,7 @@ cd agent404-proactive-csi
 
 ## Security & Secrets Management
 
-All IBM Cloud and external service credentials are loaded exclusively from environment variables. No API keys, instance IDs, account IDs, or project IDs exist in the repository history or current working tree after final purge (tag `v2.9.1`).
+All IBM Cloud and external service credentials are loaded exclusively from environment variables. No API keys, instance IDs, account IDs, or project IDs exist in the repository history or current work...
 
 ### Workflow
 1. Copy `.env.example` to `.env` and populate real values locally.
@@ -233,7 +353,6 @@ print(brief['executive_brief'])
 - **IBM watsonx Orchestrate Team** - For the powerful orchestration platform
 - **Hackathon Organizers** - For the opportunity
 
-
 ## Authors
 
 | Name                   | Link                                                              | Role                                           |
@@ -243,7 +362,6 @@ print(brief['executive_brief'])
 | Piotr Karmelita        | [GitHub](https://github.com/p-karmelita)                         | Backend & Data                                 |
 
 Sources
-
 
 ⭐ **If RETENX inspired you, please star this repo!** ⭐
 

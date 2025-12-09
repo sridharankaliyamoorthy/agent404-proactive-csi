@@ -351,7 +351,7 @@ print(brief['executive_brief'])
 
 - **IBM watsonx Team** - For incredible AI services
 - **IBM watsonx Orchestrate Team** - For the powerful orchestration platform
-- **Hackathon Organizers** - For the opportunity
+- **client ** - For the opportunity
 
 ## Authors
 

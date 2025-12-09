@@ -43,10 +43,10 @@ Watch a short walkthrough of RETENX in action on YouTube:
 
 [![RETENX Demo](https://img.youtube.com/vi/M1RukOQQRPA/0.jpg)](https://www.youtube.com/watch?v=M1RukOQQRPA)
 
-## 🎥 Project Pitch
+## 🎥 Project summary
 Watch the entire project pitch here:
 
-[RETENX Project Pitch](https://youtu.be/1qU1zd38QGY)
+[RETENX Project Pitch](https://youtu.be/1qU1szd38QGY)
 
 ## TRY these test queries that showcase all 6 IBM services
 [Test QUERIES](https://docs.google.com/document/d/1SfE3XwLRSJOGmq4Pnv6ntCWn14RWQOfvnqB2yGgayZE/edit?usp=sharing)
